@@ -1,0 +1,966 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+
+@font-face {
+    font-family: 'SF_HambakSnow';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/SF_HambakSnow.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'InkLipquid';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/InkLipquid.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'PuradakGentleGothicR';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.1/PuradakGentleGothicR.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+*{margin: 0 ; padding: 0;}
+a{text-decoration: none; color: #111; display: block;}
+li{list-style: none;}
+header,section,footer{float: left; width: 100%;}
+header,section,footer,div{box-sizing: border-box;}
+header{z-index: 100; position: absolute; background-color: rgba(0, 0, 0, 0.3); height: 60px;}
+html, body{overflow-x: hidden; position: relative;}
+.wrap{width: 100%;}
+body{
+    background-color: #0d0d0d;
+}
+body{
+    font-family: 'SF_HambakSnow';
+}
+h1{
+    color:#fff;
+}
+/* pc (481px~1920px 이상)  */
+
+.popup{
+  display: none;
+}
+/* 풀페이지 네비게이션 */
+#fp-nav ul li{
+  width: 30px;
+  height: 30px;
+  margin: 1vw;
+
+}
+#fp-nav ul li a span{
+  background: none;
+  
+}
+#fp-nav ul li:first-child{
+  background-image: url(../img/mainimg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#fp-nav ul li:nth-child(2){
+  background-image: url(../img/profilimg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#fp-nav ul li:nth-child(3){
+  background-image: url(../img/reviewimg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#fp-nav ul li:nth-child(4){
+  background-image: url(../img/guestimg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#fp-nav ul li:nth-child(5){
+  background-image: url(../img/contactimg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* 메인 */
+
+header .ham{
+  display: none;
+}
+.main{
+    background-image: url(../img/background.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    
+}
+.main h1{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #999898;
+    font-size: 5.5vw;
+    top: 46vh;
+
+}
+.container {
+  display: flex;
+  position: absolute;
+  left: 0;
+  bottom:0px;
+  width: 120%;
+  pointer-events: none;
+  
+  }
+  
+  .fog {
+  opacity: 100%;
+  min-width: 2000px;
+  position: relative;
+  animation-name: fog;
+  animation-duration: 4s; 
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear
+  }
+  
+  @keyframes fog {
+      from {right: 0px;}
+      to {right: 50px; }
+    }
+
+.astronaut{
+    margin-top: 4vw;
+    margin-left: 12vw;
+    position: relative;
+    animation: fly 2s;
+}
+@keyframes fly{
+  0%{left:-300px;}
+
+  100%{left:0;}
+}
+/* heonyverse 웨이브 텍스트 */
+.waviy {
+  position: relative;
+  -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0,0,0,.2));
+  font-size: 2vw;
+  left: 62vw;
+  top: 32vh;
+}
+.waviy span {
+  font-family: 'SF_HambakSnow', cursive;
+  position: relative;
+  display: inline-block;
+  color: #fff;
+  animation: waviy 2.5s infinite ;
+  animation-delay: calc(.1s * var(--i));
+  
+}
+@keyframes waviy {
+  0%,40%,100% {
+    transform: translateY(0)
+  }
+  20% {
+    transform: translateY(-20px)
+  }
+}
+.logo{
+  display: none;
+}
+/* 2 */
+.profile{
+  position: relative;
+}
+.profile nav > ul{
+    display: flex; 
+    justify-content:space-between;
+    width: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    top: 2vw;
+    height: 5vw;
+}
+.profile nav ul li a{
+    color: #fff;
+    white-space: nowrap;
+}
+
+.profile nav ul li:hover img {
+    animation: rotate_image 4s linear infinite, scale2 4s linear infinite;
+    transform-origin: 50% 50%;
+}
+@keyframes rotate_image {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+.profile .profilebox{
+    display: flex;
+    margin-top: 2vw;
+}
+
+.profile .p_txt{
+    color: #fff;
+    font-size: 2vw;
+    margin-left: 10vw;
+    margin-top: 3vw;
+    position: absolute;
+}
+.profile .leftbox{
+    display: flex;
+    margin-top: 8vw;
+    margin-left: 10vw;
+}
+.profile .leftbox .aboutme{
+    font-family: 'Pretendard-Regular';
+    margin-left: 3vw;
+    margin-top: 4vw;
+    line-height: 2;
+    color: #fff;
+}
+.like span{
+    color: #ebf0b5;
+}
+.wrapper {
+    width: 30ch;
+    display: grid;
+    place-items: center;
+}
+
+.like {
+  width: 50ch;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid;
+  font-size: 2vw;
+  color: #fff;
+  font-family: 'InkLipquid';
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  top: 200px;
+}
+.like.active {
+  animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
+}
+
+
+
+
+/* 스킬바 */
+.title{
+    display: inline-block;
+    font-size: 2vw;
+    margin-bottom: 2vw;
+    color: #fff;
+    margin-top: 6vw;
+}
+.myskills .skill{
+    white-space: nowrap;
+}
+.myskills > .skill > .progressbar {
+    display: inline-block;
+    height: 2vw;
+}
+.myskills > .skill > .skillper {
+    display: inline-block;
+    width: 40px;
+    height: 21px;
+    text-align: center;
+    font-size: 0.8vw;
+    font-weight: 100;
+    color: #999999;
+}
+.myskills > .skill {
+    margin-bottom: 10px;
+}
+.myskills > .skill:nth-last-child(1){
+    margin-bottom: 0;
+}
+.myskills > .skill > .progressbar {
+    display: inline-block;
+    width: 18vw;
+    height: 1.3vw;
+    background-color: #fff;
+}
+
+.myskills > .skill > .progressbar > .gauge {
+    display: inline-block;
+    width: 10%;
+    height: 1.3vw;
+    background-color: #394568;
+    transition: 1s linear;
+}
+.myskills .skill span{
+    color: #fff;
+}
+.myskills .skill .skillname{
+    float: left;
+    width: 4vw;
+    font-size: 1vw;
+    margin-right: 2vw;
+}
+
+
+
+
+  /* 리뷰 */
+
+  .review .swiper-slide{
+    background-image: url(../img/review_back.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 21vw;
+    padding: 2vw 1vw 3vw;
+  }
+  .review{
+    color: #fff;
+    position: relative;
+  }
+  .review h1{
+    margin-left: 9vw;
+    top: 5vw;
+    font-size: 2vw;
+    position: absolute;
+  }
+  .review .friends{
+    margin-bottom: 2vw;
+  }
+  .review .friends h3{
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    font-style: normal;
+    font-family: 'InkLipquid';
+    font-size: 2vw;
+    font-weight: lighter;
+
+  }
+  .review h2{
+    font-family: 'InkLipquid';
+    font-size: 1.2vw;
+    text-align: center;
+    margin-top: 1vw;
+    font-weight: lighter;
+    color: #ebe8bd;
+  }
+  .review span{
+    font-family: 'InkLipquid';
+    font-size: 1vw;
+    margin-top: 15px;
+  }
+  .review p{
+    font-family: 'Pretendard-Regular';
+    line-height: 22px;
+    margin-top: 1vw;
+    font-size: 15px;
+  }
+  .review .swiper-slide .last{
+    margin-top: 4vw;
+  }
+
+ .review .swiper {
+    width: 60%;
+    
+}
+
+  .review .swiper-button-next{
+    background-image: url(../img/arrow.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    margin-right: 15vw;
+    margin-top: 3vw;
+  }
+  .review .swiper-button-prev{
+    background-image: url(../img/arrow_left.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    margin-left: 15vw;
+    margin-top: 3vw;
+  }
+
+  .review .swiper-button-next::after{
+    content: "";
+  }
+  .review .swiper-button-prev:after{
+    content: "";
+  }
+
+
+
+
+
+   /* 방명록  */
+
+  .guestbook{
+    position: relative;
+  }
+  .guestbook h1{
+    position: absolute;
+    margin-left: 9vw;
+    top: 5vw;
+    font-size: 2vw;
+  }
+  .guestbook .link{
+    width: 50%;
+    margin: 0 auto;
+  }
+  .guestbook .link iframe{
+    width: 100%;
+    height: 600px;
+    border-radius: 30px;
+    border: solid 10px #7987af; 
+  }
+
+
+  /* 컨텍 */
+
+  
+
+  .contact{
+    background-image: url(../img/conback.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+
+  }
+
+  .contact .rocket{
+    position: absolute;
+    margin-left: 20vw;
+    margin-top: 3vw;
+    
+  }
+  .contact .rocket img{
+    transform: translateY(-20%);
+    animation: floater 4s infinite;
+    transition: ease 1s;
+    width: 200px;
+    height: 200px;
+    
+  }
+  
+  @keyframes floater {
+    0%{transform: translateY(-20%);transition: ease 0.5s;}
+    50%{transform: translateY(20%);transition: ease 0.5s;}
+  }
+  
+  .contact h1{
+    position: absolute;
+    margin-left: 9vw;
+    top: 5vw;
+    font-size: 2vw;
+  }
+  .contact .box #emailform{
+    margin: 0 auto;
+    width: 30vw;
+  }
+  
+  .contact .box #emailform label{
+    color: #fff;
+    font-size: 1vw;
+    font-family: 'Pretendard-Regular';
+  }
+
+  .contact .box #emailform textarea{
+    width: 100%;
+    height: 15vw;
+    padding: 0.5vw;
+    background-color: rgba(255, 255, 255, 0.5);
+    font-size: 1vw;
+    font-family: 'Pretendard-Regular';
+    border-radius: 5px;
+  }
+  .contact .box #emailform input{
+    width: 100%;
+    height: 35px;
+    padding: 0.5vw;
+    background-color: rgba(255, 255, 255, 0.5);
+    font-size: 1vw;
+    font-family: 'Pretendard-Regular';
+    border-radius: 5px;
+
+  }
+  .contact .box fieldset{
+    border: 0;
+    padding: 10px;
+  }
+  .contact .box #emailform ::placeholder{
+    color: #ddd;
+    font-size: 1vw;
+    font-family: 'Pretendard-Regular';
+  }
+  .contact .box .thankyou_message h2{
+    color: #ddd;
+    text-align: center;
+    font-family: 'Pretendard-Regular';
+  }
+  em{
+    all: unset;
+  }
+  .contact button{
+    all: unset;
+    background-image: url(../img/send.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 220px;
+    height: 180px;
+    position: absolute;
+    transition: all 0.3s;
+    transform: rotateZ(0);
+    right: 20vw;
+    top: 22vw;
+  }
+  .contact button:hover{
+    transform: rotateZ(15deg);
+  }
+
+
+
+  /* 푸터 */
+
+
+  footer .marquee{
+    display: block;
+    width: 100%;
+    height: 8vw;
+    overflow: hidden;
+    position: relative;
+}
+footer .marquee .marquee_box{
+    /* 부모 영역 두배 */
+    width: 200%;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    position: absolute;
+    overflow: hidden;
+
+    animation: marquee 20s linear infinite;
+}
+footer .marquee .marquee_box span{
+    /* 부모객체 마키박스의 가로길이의 50% */
+    width: 50%;
+    padding: 1vw 0;
+    color: #a4a4a4;
+    display: inline-block;
+    text-align: center;
+    white-space: nowrap;
+    font-size: 3vw;
+    display: flex;
+
+}
+footer .marquee .marquee_box p{
+    color: #fff; margin-left: 1vw;
+}
+@keyframes marquee{
+    0%{left: 0;}
+    100%{left: -100%;}
+}
+footer .copy p{
+  text-align: center;
+  color: #8f8e8e;
+  
+}
+footer .copy{
+  background-color: #0d0d0d;
+  margin-bottom: 3vw;
+}
+
+
+
+/* 모바일버전 */
+
+@media screen and (max-width:480px){
+  header{
+    height: 40px;
+    padding: 1vw;
+    position: fixed
+  }
+
+  header .ham{
+    display: block;
+    float: right;
+    margin-right: 10px;
+    margin-top: 0.5vw;
+  }
+  header .ham img{
+    width: 30px;
+    height: 30px;
+  }
+
+  /* 모바일 메인 */
+
+  .main{
+    height: 700px;
+    background-image: url(../img/mobile_back.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .main .astronaut{
+    margin-top: 51vh;
+    position: relative;
+    margin-left: 5vw;
+  }
+  .main .astronaut img{
+    width: 35%;
+    height: 35%;
+  }
+  .main h1{
+    font-size: 34px;
+    white-space: nowrap;
+    position: absolute;
+  }
+  .main .waviy{
+    position: absolute;
+    margin-top: 150px;
+    white-space: nowrap;
+    left: 40vw;
+  }
+  .main .waviy span{
+    font-size: 5vw;
+  }
+  .main .logo{
+    margin-top: 30vh;
+    display: block;
+  }
+  .main .logo img{
+    opacity: 0.2;
+    width: 220px;
+    position: absolute;
+  } 
+
+
+  /* 모바일 프로필 */
+
+  .profile{
+    height: 1050px; 
+  }
+  .profile .p_txt{
+    font-size: 25px;
+    margin-top: 300vw;
+    position: absolute;
+  }
+  .profile .profilebox{
+    flex-direction: column;
+  }
+  .profile .leftbox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 0;
+    margin-top: 90px;
+    align-items: center;
+    
+    
+  }
+  .profile .p_txt{
+    margin-top: 50px;
+  }
+  nav{
+    display: none;
+  }
+  .profile .ah{
+    margin-top: 100px;
+    
+  }
+  .profile .ah img{
+    width: 185Px;
+    height: 235px;
+    
+  }
+  .profile .aboutme {
+    padding: 1vw;
+    width: 250px;
+    
+  }
+  .profile .aboutme p{
+    font-size: 13px;
+  }
+  
+  .profile .like {
+    font-size: 19px;
+    top: 11%;
+  }
+  .profile .rightbox{
+    margin: 0 auto;
+    padding-top: 20px;
+
+  }
+  .profile .rightbox .title{
+    font-size: 4vw;
+    margin-bottom: 30px;
+
+  }
+ 
+  /* 모바일 스킬바 */
+
+  .myskills > .skill > .progressbar.active .sk1{
+    width: 80%;
+  }
+  .myskills > .skill > .progressbar.active .sk2{
+    width: 50%;
+  }
+  .myskills > .skill > .progressbar.active .sk3{
+    width: 80%;
+  }
+  .myskills > .skill > .progressbar.active .sk4{
+    width: 70%;
+  }
+  .myskills > .skill > .progressbar.active .sk5{
+    width: 50%;
+  }
+  .myskills > .skill > .progressbar.active .sk6{
+    width: 30%;
+  }
+  .myskills > .skill > .progressbar.active .sk7{
+    width: 50%;
+  }
+  .myskills > .skill > .progressbar.active .sk8{
+    width: 30%;
+  }
+
+  .profile .rightbox .myskills{
+    margin-right: 30px;
+  }
+  .profile .rightbox .myskills .skill .skillname{
+    margin-right: 40px;
+    font-size: 12px;
+  }
+
+  .myskills > .skill > .skillper{
+    font-size: 12px;
+  }
+  .myskills > .skill > .progressbar{
+    width: 40vw;
+    height: 4vw;
+    position: relative;
+  }
+  .myskills > .skill > .progressbar > .gauge{
+    height: 4vw;
+    position: absolute;
+    transition: all 3s;
+  }
+  .myskills > .skill{
+    margin-bottom: 3px;
+  }
+
+  /* 모바일 리뷰 */
+  .review{
+    height: 700px;
+  }
+  .review h1{
+    font-size: 25px;
+    margin-top: 10vw;
+  }
+  .review .swiper{
+    width: 70vw;
+  }
+  .review .friends h3{
+    top: 21%;
+    width: 200px;
+    font-size: 22px;
+  }
+  .review .swiper-slide{
+    position: relative;
+    margin-top: 210px;
+    padding: 5px;
+    border-radius: 30px;
+    height: 380px;
+  }
+  .review .swiper-slide span{
+    font-size: 1.2em;
+    margin-top: 20px;
+    display: block;
+  }
+  .review .swiper-slide h2{
+    font-size: 1.2em;
+    margin-top: 10px;
+  }
+  .review .swiper-slide p{
+    font-size: 0.8em;
+    line-height: 20px;
+    margin-top: 20px;
+    padding: 5px;
+  }
+  .review .swiper-slide .last{
+    margin-top: 70px;
+  }
+  .review .swiper-button-next{
+    margin-right: 5px;
+    margin-top: 0;
+    top: 380px;
+    
+    
+  }
+  .review .swiper-button-prev{
+    margin-left: 5px;
+    margin-top: 0;
+    top: 380px;
+  }
+
+
+
+  /* 모바일 방명록 */
+  .guestbook{
+    display: none;
+  }
+
+
+  /* 모바일 컨텍 */
+  .contact{
+    height: 600px;
+  }
+  .contact h1{
+    margin-top: 10vw;
+    font-size: 25px;
+  }
+  .contact .rocket{
+    margin-left: 8vw;
+    margin-top: 30vw;
+  }
+  .contact .rocket img{
+    width: 25%;
+    height: 25%;
+  }
+
+  .contact .box #emailform label{
+    font-size: 13px;
+  }
+  .contact .box #emailform{
+    margin-top: 25vh;
+    width: 250px;
+  }
+  .contact .box #emailform textarea{
+    font-size: 14px;
+    height: 20vh;
+  }
+
+  .contact button{
+    width: 124px;
+    height: 100px;
+    position: absolute;
+    top: 65vh;
+    right: 10vw; 
+  }
+  .contact .box #emailform input{
+    font-size: 14px;
+  }
+  .contact .box .thankyou_message {
+    position: absolute;
+    margin-top: 110px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    font-size: 14px;
+  }
+  .contact .box #emailform ::placeholder{
+    font-size: 14px;
+  }
+
+  /* 모바일 푸터 */
+  footer .marquee{
+    width: 200%;
+    /* background-color: #394568; */
+    height: 40px;
+  }
+  footer .marquee .marquee_box span{
+    padding: 3vw;
+    font-size: 15px;
+  } 
+
+
+  footer .copy{
+    padding: 3vw;
+  }
+  footer .copy p{
+    font-size: 11px;
+    padding-top: 2vw;
+  }
+
+
+  /* 모바일 팝업 */
+.popup{
+  display: block;
+  top: -100%;
+  position: fixed;
+  width: 100%;
+  height: 50vh;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 5vw 0;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+}
+.popup .close{
+  float: right;
+  margin-right: 5vw;
+}
+.popup .close img{
+  width: 25px;
+}
+.popup .popup_nav nav{
+  display:block; 
+  margin-top: 3vh;
+}
+.popup .popup_nav a{
+  font-size: 4vw;
+  text-align: center;
+  color: #ffffff;
+  padding: 3vw;
+  font-weight: bold;
+}
+.popup .popup_nav a img{
+  width: 20px;
+  margin-right: 2vw;
+}
+
+
+.back-to-position {
+  opacity: 0;
+  transition-duration: 1s;
+}
+.show .back-to-position {
+  opacity: 1;
+  transform: translateX(0);
+}
+.show .back-to-position.delay-1 {
+  transition-delay: .4s;
+}
+.show .back-to-position.delay-2 {
+  transition-delay: .9s;
+}
+
+
+
+}
